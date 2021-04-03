@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --line-border-fill: #f7b731;
+  --line-border-empty: #c7c7c71e;
+}
+
+body {
+  background: #141414;
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+.container .progress-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  width: 20rem;
+}
+
+.container .progress-container::before {
+  content: "";
+  background: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 0.2rem;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress {
+  background: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 0.2rem;
+  width: 0%;
+  z-index: -1;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.circle {
+  background: #141414;
+  color: #999;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.13rem solid var(--line-border-empty);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.active {
+  border-color: var(--line-border-fill);
+  color: white;
+}
+
+.btn {
+  background: var(--line-border-fill);
+  color: #141414;
+  border: 0;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+.btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background: var(--line-border-empty);
+  cursor: not-allowed;
+  color: #999;
+}
+/*# sourceMappingURL=style.css.map */
